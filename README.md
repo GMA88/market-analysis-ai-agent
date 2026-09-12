@@ -134,48 +134,15 @@ Sistema integral de análisis de mercado que combina:
 
 ## 📁 Estructura del Proyecto
 
-```
 market-analysis-ai-agent/
 │
-├── app.R                          # Aplicación principal Shiny
-│
-├── R/
-│   ├── ui/
-│   │   ├── dashboard_ui.R         # Dashboard analítico
-│   │   ├── chatbot_ui.R           # Interfaz del chatbot
-│   │   ├── visualizer_ui.R        # Visualizador de datos
-│   │   └── maps_ui.R              # Mapas geográficos
-│   │
-│   ├── server/
-│   │   ├── dashboard_server.R     # Lógica dashboard
-│   │   ├── chatbot_server.R       # Lógica chatbot IA
-│   │   ├── database_server.R      # Gestión BD
-│   │   └── viz_server.R           # Lógica visualizaciones
-│   │
-│   └── utils/
-│       ├── ai_engine.R            # Motor IA (Qwen2.5)
-│       ├── sql_generator.R        # Generador de SQL
-│       ├── db_connection.R        # Conexión SQLite
-│       └── validators.R           # Validaciones
-│
+├── app.R                          # Aplicación monolítica Shiny (UI, Server & Lógica Reactiva)
 ├── data/
-│   └── enigh_market_analysis.db   # Base de datos SQLite
-│
-├── config/
-│   ├── database_config.R          # Configuración BD
-│   └── ai_config.R                # Configuración IA
-│
-├── www/
-│   ├── css/
-│   │   └── custom_styles.css      # Estilos personalizados
-│   ├── js/
-│   │   └── graphic_walker.js      # Integración Graphic Walker
-│   └── images/
-│       └── logo.png               # Logo de la app
-│
-├── requirements.txt               # Dependencias R
-└── README.md                      # Este archivo
-```
+│   └── enigh_market_analysis.db   # Base de datos SQLite local (ENIGH)
+├── Dockerfile                     # Configuración de empaquetado del servicio Shiny
+├── docker-compose.yml             # Orquestación de servicios (App + Ollama local)
+├── requirements.txt               # Paquetes y dependencias de R
+└── README.md                      # Documentación del caso de estudio
 
 ## 🚀 Características Técnicas Destacadas
 
@@ -451,48 +418,15 @@ Comprehensive market analysis system combining:
 
 ## 📁 Project Structure
 
-```
 market-analysis-ai-agent/
 │
-├── app.R                          # Main Shiny application
-│
-├── R/
-│   ├── ui/
-│   │   ├── dashboard_ui.R         # Analytics dashboard
-│   │   ├── chatbot_ui.R           # Chatbot interface
-│   │   ├── visualizer_ui.R        # Data visualizer
-│   │   └── maps_ui.R              # Geographic maps
-│   │
-│   ├── server/
-│   │   ├── dashboard_server.R     # Dashboard logic
-│   │   ├── chatbot_server.R       # AI chatbot logic
-│   │   ├── database_server.R      # DB management
-│   │   └── viz_server.R           # Visualization logic
-│   │
-│   └── utils/
-│       ├── ai_engine.R            # AI engine (Qwen2.5)
-│       ├── sql_generator.R        # SQL generator
-│       ├── db_connection.R        # SQLite connection
-│       └── validators.R           # Validations
-│
+├── app.R                          # Monolithic Shiny application (UI, Server & Reactive Logic)
 ├── data/
-│   └── enigh_market_analysis.db   # SQLite database
-│
-├── config/
-│   ├── database_config.R          # DB configuration
-│   └── ai_config.R                # AI configuration
-│
-├── www/
-│   ├── css/
-│   │   └── custom_styles.css      # Custom styles
-│   ├── js/
-│   │   └── graphic_walker.js      # Graphic Walker integration
-│   └── images/
-│       └── logo.png               # App logo
-│
-├── requirements.txt               # R dependencies
-└── README.md                      # This file
-```
+│   └── enigh_market_analysis.db   # Local SQLite database (ENIGH microdata)
+├── Dockerfile                     # Container packaging configuration for the Shiny service
+├── docker-compose.yml             # Multi-container orchestration (Shiny App + Local Ollama)
+├── requirements.txt               # R dependencies and libraries
+└── README.md                      # Technical case study documentation
 
 ## 🚀 Technical Features Highlights
 
